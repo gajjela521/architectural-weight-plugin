@@ -1,0 +1,19 @@
+<idea-plugin>
+    <id>com.architecture.weight.plugin</id>
+    <name>Architectural Weight Gutter Visualizer</name>
+    <vendor email="user@example.com" url="http://www.example.com">Architecture Team</vendor>
+    <description><![CDATA[
+      Calculates and displays a "Risk Score" in the editor gutter based on code coupling and Git churn.<br>
+      High risk code is highlighted based on Inbound Dependencies and Git commit frequency.
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+    <depends>Git4Idea</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <codeInsight.lineMarkerProvider language="JAVA" implementationClass="com.architecture.weight.plugin.ArchitecturalWeightLineMarkerProvider" />
+    </extensions>
+</idea-plugin>

@@ -1,0 +1,45 @@
+# Gradle build outputs & caches
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+bin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Plugin artifacts
+*.zip
+*.jar
+
+# ── Secrets & Credentials ─────────────────────────────────────
+# Environment files
+.env
+.env.*
+*.env
+
+# Key / certificate files
+*.pem
+*.key
+*.p12
+*.keystore
+*.jks
+
+# Sensitive property files (keep gradle-wrapper.properties via exception above)
+local.properties
+secrets.properties
+*secret*.properties
+*credential*.properties
+*password*.properties
+
+# AWS / cloud credentials
+.aws/
+credentials
